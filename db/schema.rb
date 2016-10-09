@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20161009144810) do
 
   create_table "campaigns", force: :cascade do |t|
     t.integer  "foundation_id"
+    t.string   "name"
     t.text     "description"
     t.date     "start_date"
     t.date     "end_date"
@@ -26,6 +27,7 @@ ActiveRecord::Schema.define(version: 20161009144810) do
   end
 
   create_table "foundations", force: :cascade do |t|
+    t.string   "name"
     t.text     "description"
     t.string   "founders"
     t.string   "web_page"

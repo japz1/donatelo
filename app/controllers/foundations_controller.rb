@@ -21,6 +21,6 @@ class FoundationsController < ApplicationController
 
   private
   	def foundation_params
-    	params.require(:foundation).permit(:description, :founders, :web_page, :email, :mision)
+    	params.require(:foundation).permit(:name, :description, :founders, :web_page, :email, :mision)
   	end
 end

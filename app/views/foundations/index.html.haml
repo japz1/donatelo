@@ -1,10 +1,62 @@
-%h1 Foundations
-
-- @foundations.each do |foundation|
-	.row
-		= foundation.description
-		= foundation.founders
-		= foundation.web_page
-		= foundation.email
-		= foundation.mision
-		= link_to "create_campaign", new_foundation_campaigns_path(foundation.id)
+.container
+  .row
+    .col-md-3
+      %p.lead Fundaciones
+      .list-group
+        %a.list-group-item{:href => "#"} Category 1
+        %a.list-group-item{:href => "#"} Category 2
+        %a.list-group-item{:href => "#"} Category 3
+    .col-md-9
+      .row.carousel-holder
+        .col-md-12
+          #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
+            %ol.carousel-indicators
+              %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+              %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+              %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+            .carousel-inner
+              .item.active
+                %img.slide-image{:alt => "", :src => "http://placehold.it/800x300"}/
+              .item
+                %img.slide-image{:alt => "", :src => "http://placehold.it/800x300"}/
+              .item
+                %img.slide-image{:alt => "", :src => "http://placehold.it/800x300"}/
+            %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-example-generic"}
+              %span.glyphicon.glyphicon-chevron-left
+            %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-example-generic"}
+              %span.glyphicon.glyphicon-chevron-right
+      .row
+        - @foundations.each do |foundation|
+          .col-sm-4.col-lg-4.col-md-4
+            .thumbnail
+              %img{:alt => "", :src => "http://placehold.it/320x150"}/
+              .caption
+                %h4.pull-right $24.99
+                %h4
+                  = foundation.name
+                %p
+                  = foundation.description
+                = succeed "." do
+                  %a{:href => "http://#{foundation.web_page}", :target => "_blank"} 
+                    = foundation.web_page
+              .ratings
+                %p.pull-right 15 reviews
+                %p
+                  %span.glyphicon.glyphicon-star
+                  %span.glyphicon.glyphicon-star
+                  %span.glyphicon.glyphicon-star
+                  %span.glyphicon.glyphicon-star
+                  %span.glyphicon.glyphicon-star
+    / /.container
+    .container
+      %hr/
+      / Footer
+      %footer
+        .row
+          .col-lg-12
+            %p Copyright © Your Website 2014
+    / /.container
+    / jQuery
+    %script{:src => "js/jquery.js"}
+    / Bootstrap Core JavaScript
+    %script{:src => "js/bootstrap.min.js"}
