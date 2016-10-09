@@ -1,0 +1,14 @@
+= simple_form_for @foundation do |f|
+	.col-sm-12.col-lg-12
+		= f.input :description
+	.col-sm-12.col-lg-12
+		= f.input :founders
+	.col-sm-12.col-lg-12
+		= f.input :web_page
+	.col-sm-12.col-lg-12
+		= f.input :email
+	.col-sm-12.col-lg-12
+		= f.input :mision
+
+	.btn-group.btn-group-sm
+		= f.submit 'Guardar', class: 'btn btn-primary'

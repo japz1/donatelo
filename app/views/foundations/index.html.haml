@@ -1,0 +1,10 @@
+%h1 Foundations
+
+- @foundations.each do |foundation|
+	.row
+		= foundation.description
+		= foundation.founders
+		= foundation.web_page
+		= foundation.email
+		= foundation.mision
+		= link_to "create_campaign", new_foundation_campaigns_path(foundation.id)
