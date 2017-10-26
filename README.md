@@ -1,24 +1,26 @@
-# README
+# Donatelo: A small project to help build a better world
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+**Ruby version** 
+* ruby "2.3.0"
 
-* System dependencies
+**System dependencies**
+- PostgreSQL database
 
-* Configuration
+**Configuration**
 
-* Database creation
+**Database creation:**
+- rake db:create 
 
-* Database initialization
+**Database initialization**
+- rake db:migrate
 
-* How to run the test suite
+**How to run the test suite**
 
-* Services (job queues, cache servers, search engines, etc.)
+**Services (job queues, cache servers, search engines, etc.)**
 
-* Deployment instructions
+**Deployment instructions**
 
-* ...
+**...**
